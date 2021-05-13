@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: hsl(233, 47%, 7%);
+}
+
+.container{
+    max-width: 900px;
+    margin: 100px auto;
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.img{ 
+    position: relative;
+    overflow:hidden;
+}
+img{
+    height: 100%;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsl(277, 64%, 61%);
+    opacity: 0.8;
+    mix-blend-mode:color;
+}
+.card{
+    background-color:hsl(244, 38%, 16%);
+    padding: 35px 50px;
+}
+.para{
+   color: hsla(0, 0%, 100%, 0.75);
+   margin-top: 30px;
+   font-family: 'Lexend Deca'; 
+   font-size: 17px;
+   line-height: 1.5em;
+}
+section > div > p {
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 15px;
+    font-family: 'Lexend Deca';
+}
+section > div{
+    text-align: center;
+}
+section > div > h2 {
+    color:hsl(0, 0%, 100%);
+    font-family: 'Inter';
+}
+h1{
+    color: hsl(0, 0%, 100%);
+    font-family: 'Inter';
+    font-weight: 800;
+}
+span{
+    color: hsl(277, 64%, 61%);
+}
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+@media only screen  and (max-width: 610px){
+      .img{
+          background-image: url('images/image-header-mobile.jpg');
+          grid-row: 1/2;
+      }
+      .card{
+          grid-row: 2/7;
+          text-align: center;
+      }
+      .container{
+          grid-template-columns: 1fr;
+      }
+      section{
+          flex-direction: column;
+          align-items: center;
+      }
+      section > div{
+          margin-bottom: 20px;
+
+      }
+      img{
+          content:url('images/image-header-mobile.jpg');
+      }
+}
